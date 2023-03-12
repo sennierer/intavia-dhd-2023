@@ -27,50 +27,54 @@
 
 #### SPARQL template example I
 
-<pre><code data-trim data-noescape data-line-numbers="12,23|15|21">
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX idm: <https://www.intavia.eu/idm/>
-    PREFIX idmcore: <http://www.intavia.eu/idm-core/>
-    PREFIX bioc: <http://ldf.fi/schema/bioc/>
-    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+<textarea data-template>
 
-    SELECT ?entity ?entityType ?entityTypeLabel ?entityLabel ?gender ?genderLabel ?nationalityLabel ?occupation ?occupationLabel 
-    ?event ?linkedIds ?count ?geometry ?role_type (?entity as ?source) ?mediaObject ?biographyObject
+```sparql [12,23|15|21]
 
-    {% include 'add_datasets_v2_1.sparql' %}
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX idm: <https://www.intavia.eu/idm/>
+PREFIX idmcore: <http://www.intavia.eu/idm-core/>
+PREFIX bioc: <http://ldf.fi/schema/bioc/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-    WITH {
-    SELECT DISTINCT ?entity ?entityTypeLabel 
+SELECT ?entity ?entityType ?entityTypeLabel ?entityLabel ?gender ?genderLabel ?nationalityLabel ?occupation ?occupationLabel 
+?event ?linkedIds ?count ?geometry ?role_type (?entity as ?source) ?mediaObject ?biographyObject
 
-    {% include 'add_datasets_v2_1.sparql' %}
+{% include 'add_datasets_v2_1.sparql' %}
+
+WITH {
+SELECT DISTINCT ?entity ?entityTypeLabel 
+
+{% include 'add_datasets_v2_1.sparql' %}
+
+WHERE {
+{% include 'query_entities_v2_1.sparql' %}
+{% include 'entity_type_bindings_v2_1.sparql' %}
+} ORDER BY ?entity
+LIMIT {{limit}}
+{% if _offset > 0 %}OFFSET {{_offset}}{% endif %}
+} AS %query_set
+
+WITH {
+    SELECT (COUNT(DISTINCT ?entity) AS ?count)
+
+    {% for dataset in datasets %}
+    FROM <{{dataset.value}}>
+    {% endfor %}
 
     WHERE {
-    {% include 'query_entities_v2_1.sparql' %}
-    {% include 'entity_type_bindings_v2_1.sparql' %}
-    } ORDER BY ?entity
-    LIMIT {{limit}}
-    {% if _offset > 0 %}OFFSET {{_offset}}{% endif %}
-    } AS %query_set
-
-    WITH {
-        SELECT (COUNT(DISTINCT ?entity) AS ?count)
-
-        {% for dataset in datasets %}
-        FROM <{{dataset.value}}>
-        {% endfor %}
-
-        WHERE {
-            {% include 'query_entities_v2_1.sparql' %}
-            {% include 'entity_type_bindings_v2_1.sparql' %}
-        }
-    } AS %count_set
-
-    WHERE {  
-    INCLUDE %query_set
-    INCLUDE %count_set
-    {% include 'retrieve_entities_v2_1.sparql' %}
+        {% include 'query_entities_v2_1.sparql' %}
+        {% include 'entity_type_bindings_v2_1.sparql' %}
     }
-</code></pre>
+} AS %count_set
+
+WHERE {  
+INCLUDE %query_set
+INCLUDE %count_set
+{% include 'retrieve_entities_v2_1.sparql' %}
+}
+```
+</textarea>
 
 +++
 
