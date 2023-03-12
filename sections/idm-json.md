@@ -1,6 +1,6 @@
 #### IDM-JSON<!-- .element: style="float: left" -->
 
-* JSON schema provided via grlc API<!-- .element: class="fragment" -->
+* JSON schema provided via API<!-- .element: class="fragment" -->
 * "simplified" version of IDM-RDF<!-- .element: class="fragment" -->
 * nodes (entities) with attributes such as "gender"<!-- .element: class="fragment" -->
 * node history: relations to other<br/>nodes with timestamp and relation type<!-- .element: class="fragment" -->

@@ -4,7 +4,7 @@
 * BioCRM extension (developed by Aalto)<!-- .element: class="fragment" -->
 * RDF Named Graphs for seperating sources<!-- .element: class="fragment" -->
 * EDM inspired CRM native modeling of cultural heritage data<!-- .element: class="fragment" -->
-* Preliminary mapping of IDM-RDF to EDM in D3.4 appendix 3<!-- .element: class="fragment" -->
+* Preliminary mapping of IDM-RDF to EDM<!-- .element: class="fragment" -->
 * PROV-O and P-Plan for provenance data<!-- .element: class="fragment" -->
 * BIBFRAME for references and citations<!-- .element: class="fragment" -->
 * adapted interpretation of Europeana's proxy model,<br/>which adapts the OAI/ORE model<!-- .element: class="fragment" -->
