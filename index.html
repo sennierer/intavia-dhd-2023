@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>InTaVia Review Meeting: WP3</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/academy.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+	<div id="header">DhD Workshop: Das Backend
+(matthias.schloegl@oeaw.ac.at)<br/>10.3.2023</div>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="#797775">
+					<div style="float: left; margin-top: 20%; color: #EAEAEA;">
+					<h3>DhD Workshop: Das Backend</h3>
+					<p style="font-size: x-large;">Please use the spacebar to run through the slides</p>
+				</div>
+				</section>
+		<section data-markdown="sections/intro_intavia.md"
+       data-separator="^\r?\n---\r?\n$"
+       data-separator-vertical="^\r?\n\+\+\+\r?\n$"
+       data-separator-notes="^Note:">
+     </section>
+	<section data-markdown="sections/idm-rdf.md"
+       data-separator="^\r?\n---\r?\n$"
+       data-separator-vertical="^\r?\n\+\+\+\r?\n$"
+       data-separator-notes="^Note:">
+     </section>
+	 <section data-background-iframe="https://mp-playground.acdh-dev.oeaw.ac.at/resource/?uri=http%3A%2F%2Fwww.intavia.eu%2Fapis%2Fbirth%2Ftimespan%2F26890" data-background-interactive data-preload >
+		<h4 style="float: left; margin-bottom: 80%;color: #575555; font-weight: bold;">IDM-RDF</h4>
+		</section>
+	 <section data-background-iframe="https://vowl.acdh.oeaw.ac.at/#iri=https://raw.githubusercontent.com/InTaVia/idm-rdf/main/idm-OWL/intavia_idm1.owl" data-background-interactive data-preload >
+		<h4 style="float: left; margin-bottom: 80%;color: #575555; font-weight: bold;">IDM-RDF</h4>
+		</section>
+	<section data-markdown="sections/idm-json.md"
+       data-separator="^\r?\n---\r?\n$"
+       data-separator-vertical="^\r?\n\+\+\+\r?\n$"
+       data-separator-notes="^Note:">
+     </section>
+	<section data-markdown="sections/intavia_api.md"
+       data-separator="^\r?\n---\r?\n$"
+       data-separator-vertical="^\r?\n\+\+\+\r?\n$"
+       data-separator-notes="^Note:">
+     </section>
+	 <section data-background-iframe="https://intavia-backend.acdh-dev.oeaw.ac.at/v2/docs/" data-background-interactive data-preload >
+		<h4 style="position:absolute; left: -10%; top: -20%; color: #575555; font-weight: bold;">API</h4>
+		</section>
+	<section data-markdown="sections/workflow_model.md"
+       data-separator="^\r?\n---\r?\n$"
+       data-separator-vertical="^\r?\n\+\+\+\r?\n$"
+       data-separator-notes="^Note:">
+     </section>
+	 <section>
+		<h4 style="float: left; margin-top: 20%; color: #575555; font-weight: bold;">IDM-RDF II: The repository</h4>
+		<p><a style="float: left; margin-top: 30%;" href="https://github.com/InTaVia/idm-rdf">https://github.com/InTaVia/idm-rdf</a></p>
+		</section>
+	<section data-markdown="sections/challenges.md"
+       data-separator="^\r?\n---\r?\n$"
+       data-separator-vertical="^\r?\n\+\+\+\r?\n$"
+       data-separator-notes="^Note:">
+     </section>
+	<section data-markdown="sections/next_steps.md"
+       data-separator="^\r?\n---\r?\n$"
+       data-separator-vertical="^\r?\n\+\+\+\r?\n$"
+       data-separator-notes="^Note:">
+     </section>
+	<section data-background-color="#797775">
+		<h3 style="float: left; margin-top: 20%; color: #EAEAEA;">WP3: Q&A</h3>
+	</section>
+     
+	 <section data-markdown>
+         <script type="text/template">
+           # Thank You!
+
+           matthias.schloegl@oeaw.ac.at
+        </script>
+    </section>
+	</div>
+	</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/animate/plugin.js"></script>
+    <script src="plugin/animate/svg.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+        width: 1400,
+        height: 900,
+
+        margin: 0.04,
+
+        minScale: 0.2,
+        maxScale: 2.0,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealAnimate ],
+        animate: {
+		    autoplay: true
+	    }
+			});
+		</script>
+	</body>
+</html>
