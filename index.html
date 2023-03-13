@@ -51,13 +51,10 @@
        data-separator-notes="^Note:">
      </section>
 	 <section data-markdown>
-	#### SPARQL template example I
+		<textarea data-template>
+		#### SPARQL template example I
 
-
-	<textarea data-template>
-
-		```sparql [12,23|15|21]
-
+		``` sparql [12,23|15|21]
 		PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		PREFIX idm: <https://www.intavia.eu/idm/>
 		PREFIX idmcore: <http://www.intavia.eu/idm-core/>
@@ -104,11 +101,9 @@
 	</textarea>
 	 </section>
 	 <section data-markdown>
-
-	#### SPARQL template example II
-
-
 	<textarea data-template>
+	#### SPARQL template example II
+	
 	``` sparql [1-4|11-16|29-34]
 	{%- if q -%}
 	?entity (crm:P1_is_identified_by/rdfs:label)|rdfs:label ?entityLabel .
@@ -198,7 +193,7 @@
 		<textarea data-template>
 	#### SPARQL template example III
 
-	```sparql [1,17|2-4|13]
+	```sparql [1,17|2-4|14]
 	BIND("no label provided" AS ?defaultEntityLabel)
 	OPTIONAL {?entity crm:P1_is_identified_by ?appellation .
 	{?appellation a crm:E33_E41_Linguistic_Appellation .} UNION {?appellation a crm:E35_Title}
