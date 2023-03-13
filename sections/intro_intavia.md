@@ -1,13 +1,3 @@
-#### Contributors<!-- .element: style="float: left" -->
-
-* Aalto: Eero, Jouni, Joonas, Heikki, Petri, Mikko...<!-- .element: class="fragment" -->
-* Vue: Victor and Go<!-- .element: class="fragment" -->
-* Krems: Florian, Eva and Johannes<!-- .element: class="fragment" -->
-* Stuttgart: Steffen and Samuel<!-- .element: class="fragment" -->
-* ÖAW: Carla<!-- .element: class="fragment" -->
-
-+++
-
 #### We are here<!-- .element: style="float: left; position: absolute; left: 5%; top: 10%; color: grey" -->
 
 <span class="fragment"></span>
